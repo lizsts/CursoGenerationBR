@@ -5,7 +5,7 @@ public class Questao4 {
 	public static void main(String[] args) {
 		
 		int n1, n2, n3; 
-		double media; 
+	     float media; 
 		
 		Scanner leia = new Scanner(System.in); 
 		

@@ -4,12 +4,13 @@ public class Questao3 {
 	
 	public static void main(String[] args) {
 		
-		double valor, valor2; 
+		float valor;
+		double valor2; 
 		
 		Scanner leia = new Scanner (System.in); 
 		
 		System.out.println("\nEntre com um valor: ");
-		valor = leia.nextDouble();
+		valor = leia.nextFloat();
 		 
 		valor2 = (valor * 0.10) + valor; 
 		

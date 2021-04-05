@@ -4,7 +4,7 @@ public class Questao6 {
 
 	public static void main(String[] args) {
 		
-	  double p1, p2; 
+	  float p1, p2; 
 		
 		Scanner valor = new Scanner(System.in);
 		

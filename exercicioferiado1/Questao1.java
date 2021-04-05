@@ -4,7 +4,7 @@ public class Questao1 {
 	     
 	public static void main(String[] args) {
 
-	double ma, mn, mm, soma;
+	float ma, mn, mm, soma;
 	
 	ma = (7 + 8 + 9) / 3;  
 	mn = (4 + 5 + 6) / 3; 

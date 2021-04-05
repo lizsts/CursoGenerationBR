@@ -4,12 +4,12 @@ public class Questao5 {
 
 	public static void main(String[] args) {
 		
-		double saldo, saldo2; 
+		float saldo, saldo2; 
 		
 		Scanner valor = new Scanner(System.in);
 		
 		System.out.println("\nDigite o saldo: "); 
-	     saldo = valor.nextDouble(); 
+	     saldo = valor.nextFloat(); 
 	
 	     saldo2 = Math.round((saldo * 0.01) + saldo); 
 		
