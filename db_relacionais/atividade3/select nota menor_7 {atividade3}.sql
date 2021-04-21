@@ -1,0 +1,1 @@
+SELECT * FROM db_escola.registro_alunes WHERE nota < 7.0; 
