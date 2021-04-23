@@ -1,0 +1,1 @@
+SELECT * FROM tb_categoria inner join tb_pizza on tb_categoria.massa = "tradicional"; 
