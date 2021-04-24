@@ -1,0 +1,1 @@
+SELECT * FROM db_generation_game_online.tb_personagem WHERE poder_de_defesa BETWEEN 1000 and 2000; 
