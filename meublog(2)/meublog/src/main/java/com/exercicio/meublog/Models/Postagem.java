@@ -1,4 +1,5 @@
 package com.exercicio.meublog.Models;
+
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -12,30 +13,30 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties; 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "postagem") 
+@Table(name = "postagem")
 public class Postagem {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id; 
-	
+	private long id;
+
 	@NotNull
 	@Size(min = 10, max = 100)
-	private String titulo; 
-	
+	private String titulo;
+
 	@NotNull
 	@Size(min = 10, max = 600)
-	private String texto; 
-	
+	private String texto;
+
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date data  = new java.sql.Date(System.currentTimeMillis());
-	
- @ManyToOne
- @JsonIgnoreProperties("postagem")
-	private Tema tema; 
+	private Date data = new java.sql.Date(System.currentTimeMillis());
+
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Tema tema;
 
 	public long getId() {
 		return id;
@@ -67,7 +68,8 @@ public class Postagem {
 
 	public void setData(Date data) {
 		this.data = data;
-	} 
+	}
+
 	public Tema getTema() {
 		return tema;
 	}
@@ -76,5 +78,4 @@ public class Postagem {
 		this.tema = tema;
 	}
 
-	
 }
