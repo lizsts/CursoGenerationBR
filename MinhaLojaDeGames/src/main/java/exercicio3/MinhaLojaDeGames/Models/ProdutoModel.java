@@ -1,4 +1,4 @@
-package com.farmacia.models;
+package exercicio3.MinhaLojaDeGames.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,66 +14,48 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tb_produtos")
-public class Produto {
-
+@Table(name = "produtos_games")
+public class ProdutoModel {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long idProdutos; 
+	
 	@NotNull
 	@Size(min = 5, max = 15)
-	private String titulo;
+	private String titulo; 
 	@NotNull
-	@Size(min = 10, max = 25)
-	private String descricao;
-	@NotNull
-	private double preco;
-
+	@Size(min = 5, max = 25) 
+	private String descricaoProdutos;
+	
 	@ManyToOne (fetch = FetchType.EAGER)
-	@JoinColumn(name = "fk_categoria", nullable = false)
-	@JsonIgnoreProperties("tb_produtos")
-	private Categoria fkCategoria;
-
-	public long getId() {
-		return id;
+	@JoinColumn(name = "fkCategoria", nullable = false)
+	@JsonIgnoreProperties("produtos_games")
+	private CategoriaModel fkCategoria; 
+	
+	public long getIdProdutos() {
+		return idProdutos;
 	}
-
-	public void setId(long id) {
-		this.id = id;
+	public void setIdProdutos(long idProdutos) {
+		this.idProdutos = idProdutos;
 	}
-
 	public String getTitulo() {
 		return titulo;
 	}
-
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-
-	public String getDescricao() {
-		return descricao;
+	public String getDescricaoProdutos() {
+		return descricaoProdutos;
 	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
-
-	public Categoria getFkCategoria() {
+	public void setDescricaoProdutos(String descricaoProdutos) {
+		this.descricaoProdutos = descricaoProdutos;
+	} 
+	public CategoriaModel getFkCategoria() {
 		return fkCategoria;
 	}
-
-	public void setFkCategoria(Categoria fkCategoria) {
+	public void setFkCategoria(CategoriaModel fkCategoria) {
 		this.fkCategoria = fkCategoria;
-	} 
-	
-	
+	}
 
 }
