@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import exercicio3.MinhaLojaDeGames.Models.CategoriaModel;
 import exercicio3.MinhaLojaDeGames.Models.ProdutoModel;
 import exercicio3.MinhaLojaDeGames.repository.ProdutoRepository;
 
