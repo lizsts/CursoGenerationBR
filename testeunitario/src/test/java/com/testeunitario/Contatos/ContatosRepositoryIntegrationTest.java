@@ -23,24 +23,20 @@ public class ContatosRepositoryIntegrationTest {
 	public void start() {
 		contato = new ContatoModel("Liz", "011", "957121456");
 	}
-
 	@Test(expected = RuntimeException.class)
 	public void salvarComTelNulo() throws Exception {
 		contato.setTelefone(null);
 		contatoRepository.save(contato);
 
 	}
-
 	@Test(expected = RuntimeException.class)
 	public void salvarComDddNulo() throws Exception {
 		contato.setDdd(null);
 		contatoRepository.save(contato);
 	}
-
-	@Test(expected = RuntimeException.class)
+    @Test(expected = RuntimeException.class)
 	public void salvarComNomeNulo() throws Exception {
 		contato.setNome(null);
 		contatoRepository.save(contato);
-
 	}
 }
